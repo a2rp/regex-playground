@@ -1,0 +1,50 @@
+.panel {
+    display: flex;
+    min-width: 0;
+    min-height: 390px;
+    flex-direction: column;
+    border: 1px solid #353650;
+    border-radius: 11px;
+    overflow: hidden;
+    background: #20213a;
+
+    .panelHeader { display: flex; min-height: 60px; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 14px; border-bottom: 1px solid #353650; background: #242540; }
+    .heading { display: flex; align-items: center; gap: 9px; }
+    .icon { display: grid; width: 29px; height: 29px; place-items: center; border-radius: 8px; color: #e9c982; background: #3a3450; }
+    .icon svg { width: 14px; height: 14px; }
+    h2 { color: #e6e6f4; font-size: 11px; font-weight: 700; }
+    .heading p { margin-top: 1px; color: #81839e; font-size: 9px; }
+    .status { display: inline-flex; align-items: center; gap: 5px; color: #9294af; font-size: 9px; white-space: nowrap; }
+    .status svg { width: 12px; height: 12px; }
+    .status.matches { color: #9cdaa9; }
+    .status.invalid, .status.timeout { color: #ff9b9b; }
+    .status.running { color: #c1c4ff; }
+    .resultsBody { min-height: 0; flex: 1; overflow: auto; padding: 12px; }
+    .highlightBox { max-height: 160px; margin-bottom: 12px; padding: 11px; border: 1px solid #353650; border-radius: 8px; overflow: auto; background: #18192d; }
+    .highlightBox pre { color: #c8c9dc; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 10px; line-height: 1.75; white-space: pre-wrap; overflow-wrap: anywhere; }
+    .highlightBox mark { border-radius: 2px; color: #fff8de; background: #735c30; box-shadow: 0 0 0 1px rgb(226 190 124 / 25%); }
+    .matchList { display: grid; gap: 8px; }
+    .matchCard { padding: 10px 11px; border: 1px solid #3a3c58; border-radius: 8px; background: #252642; }
+    .matchCardTop { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 7px; }
+    .matchIndex { color: #c9caff; font-size: 9px; font-weight: 700; }
+    .location { color: #9294ad; font-family: ui-monospace, Consolas, monospace; font-size: 8px; }
+    .matchText { display: block; max-width: 100%; padding: 6px 8px; border: 1px solid #45465f; border-radius: 5px; color: #f0e3b8; background: #1a1b30; font-family: ui-monospace, Consolas, monospace; font-size: 10px; white-space: pre-wrap; overflow-wrap: anywhere; }
+    .groups { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+    .groups p { width: 100%; color: #9294ad; font-size: 8px; }
+    .groups span { padding: 3px 6px; border: 1px solid #44455f; border-radius: 4px; color: #c5c7da; background: #2b2c49; font-family: ui-monospace, Consolas, monospace; font-size: 8px; }
+    .groups b { color: #c2b0ff; font-weight: 700; }
+    .emptyState { display: grid; min-height: 190px; align-content: center; justify-items: center; padding: 22px; text-align: center; }
+    .emptyIcon { display: grid; width: 32px; height: 32px; margin-bottom: 9px; place-items: center; border: 1px solid #45465f; border-radius: 9px; color: #a5a7c0; background: #292a46; font-family: ui-monospace, Consolas, monospace; font-size: 14px; }
+    .emptyState strong { color: #d6d7e8; font-size: 11px; }
+    .emptyState p { max-width: 300px; margin-top: 5px; color: #9294ad; font-size: 9px; line-height: 1.6; }
+    .truncated { margin-top: 9px; color: #e0c280; font-size: 9px; }
+    .panelFooter { display: flex; justify-content: space-between; gap: 10px; padding: 8px 13px; border-top: 1px solid #353650; color: #7c7e98; background: #242540; font-size: 8px; }
+
+    @media (max-width: 760px) { min-height: 310px; }
+    @media (max-width: 520px) {
+        min-height: 290px;
+        .panelHeader { padding: 10px; }
+        .resultsBody { padding: 9px; }
+        .panelFooter { padding: 7px 10px; font-size: 7px; }
+    }
+}
