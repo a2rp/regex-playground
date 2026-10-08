@@ -1,0 +1,36 @@
+.panel {
+    padding: 17px;
+    border: 1px solid #353650;
+    border-radius: 12px;
+    background: #20213a;
+
+    .panelHeader { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 13px; }
+    .panelLabel { display: flex; align-items: center; gap: 6px; margin-bottom: 2px; color: #aeb3ff; font-size: 9px; font-weight: 750; letter-spacing: 0.1em; text-transform: uppercase; }
+    .panelLabel svg { width: 13px; height: 13px; }
+    h2 { color: #ececfa; font-size: 13px; font-weight: 700; }
+    .engineBadge { padding: 5px 8px; border: 1px solid #3c3e5a; border-radius: 6px; color: #9b9db8; background: #242540; font-family: ui-monospace, Consolas, monospace; font-size: 9px; }
+    .regexField { display: flex; min-height: 54px; align-items: center; gap: 9px; padding: 0 14px; border: 1px solid #4b4e70; border-radius: 9px; color: #9ba1d6; background: #141525; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; }
+    .regexField:focus-within { border-color: #9299ff; box-shadow: 0 0 0 3px rgb(161 168 255 / 12%); }
+    .regexField > span { color: #888bb3; font-size: 17px; }
+    input { width: 100%; min-width: 0; border: 0; outline: 0; color: #e3e5ff; background: transparent; font-family: inherit; font-size: 14px; }
+    input::placeholder { color: #656985; }
+    .liveLiteral { flex: 0 0 auto; color: #cfb4ff; font-size: 11px; }
+    .flags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 13px; }
+    .flag { position: relative; display: inline-flex; align-items: center; gap: 6px; min-height: 30px; padding: 0 9px; border: 1px solid #3b3d59; border-radius: 7px; color: #a3a5be; background: #242540; font-size: 9px; cursor: pointer; }
+    .flag input { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer; }
+    .flag > span { color: #cccfff; font-family: ui-monospace, Consolas, monospace; font-size: 11px; font-weight: 750; }
+    .flag small { font: inherit; }
+    .flag:has(input:checked) { border-color: #656aaa; color: #dddfff; background: #303252; }
+    .flag:has(input:focus-visible) { outline: 3px solid rgb(161 168 255 / 28%); outline-offset: 2px; }
+    .helper { margin-top: 11px; color: #7f819c; font-size: 9px; }
+
+    @media (max-width: 520px) {
+        padding: 13px;
+        .panelHeader { align-items: flex-start; }
+        .regexField { gap: 6px; padding: 0 10px; }
+        .regexField input { font-size: 12px; }
+        .liveLiteral { font-size: 9px; }
+        .flags { gap: 6px; }
+        .flag { gap: 5px; padding: 0 7px; }
+    }
+}
