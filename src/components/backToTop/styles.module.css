@@ -1,0 +1,19 @@
+.button {
+    position: fixed;
+    z-index: 10;
+    right: max(20px, calc((100vw - 1360px) / 2));
+    bottom: 22px;
+    display: grid;
+    width: 43px;
+    height: 43px;
+    place-items: center;
+    border: 1px solid #4b4d6d;
+    border-radius: 10px;
+    color: #c5c8ff;
+    background: #282944;
+    box-shadow: 0 6px 22px rgb(0 0 0 / 28%);
+    svg { width: 17px; height: 17px; }
+    &:hover { border-color: #9ba0ff; box-shadow: 0 8px 25px rgb(0 0 0 / 35%); }
+    &:focus-visible { outline: 3px solid rgb(161 168 255 / 45%); outline-offset: 3px; }
+    @media (max-width: 620px) { right: 13px; bottom: 13px; }
+}
