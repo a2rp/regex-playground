@@ -1,0 +1,31 @@
+.panel {
+    display: flex;
+    min-width: 0;
+    min-height: 390px;
+    flex-direction: column;
+    border: 1px solid #353650;
+    border-radius: 11px;
+    overflow: hidden;
+    background: #20213a;
+
+    .panelHeader { display: flex; min-height: 60px; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 14px; border-bottom: 1px solid #353650; background: #242540; }
+    .heading { display: flex; align-items: center; gap: 9px; }
+    .icon { display: grid; width: 29px; height: 29px; place-items: center; border-radius: 8px; color: #aeb3ff; background: #303252; }
+    .icon svg { width: 14px; height: 14px; }
+    h2 { color: #e6e6f4; font-size: 11px; font-weight: 700; }
+    .heading p { margin-top: 1px; color: #81839e; font-size: 9px; }
+    .count { color: #8587a2; font-family: ui-monospace, Consolas, monospace; font-size: 9px; }
+    textarea { width: 100%; min-height: 0; flex: 1; padding: 16px; border: 0; outline: 0; color: #d5d8ec; background: #1b1c32; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 11px; line-height: 1.8; resize: vertical; }
+    textarea:focus-visible { box-shadow: inset 0 0 0 2px rgb(161 168 255 / 24%); }
+    textarea::placeholder { color: #6f718c; }
+    .panelFooter { display: flex; justify-content: space-between; gap: 10px; padding: 8px 13px; border-top: 1px solid #353650; color: #7c7e98; background: #242540; font-size: 8px; }
+    .visuallyHidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+    @media (max-width: 760px) { min-height: 270px; }
+    @media (max-width: 520px) {
+        min-height: 250px;
+        .panelHeader { padding: 10px; }
+        textarea { padding: 13px 11px; font-size: 10px; }
+        .panelFooter { padding: 7px 10px; font-size: 7px; }
+    }
+}
