@@ -1,3 +1,66 @@
-﻿.app-shell {
+.appShell {
     min-height: 100vh;
+    padding-top: 68px;
+    overflow: clip;
+
+    .hero { position: relative; padding: 64px 24px 19px; border-bottom: 1px solid #30314b; background: radial-gradient(ellipse at 79% 45%, rgb(100 84 159 / 20%), transparent 36%), #17182b; }
+    .heroInner { display: grid; max-width: 1320px; grid-template-columns: 1fr 0.9fr; align-items: center; gap: 70px; margin: 0 auto; }
+    .heroCopy { max-width: 640px; }
+    .heroLabel { display: flex; align-items: center; gap: 8px; margin-bottom: 17px; color: #b9bdff; font-size: 9px; font-weight: 750; letter-spacing: 0.12em; text-transform: uppercase; }
+    .heroLabel svg { width: 14px; height: 14px; }
+    h1 { color: #f0f0fa; font-size: clamp(43px, 5.5vw, 67px); font-weight: 740; letter-spacing: -0.06em; line-height: 1.02; }
+    h1 span { color: #a1a8ff; }
+    .heroDescription { max-width: 540px; margin-top: 19px; color: #a3a5bd; font-size: 13px; line-height: 1.75; }
+    .heroButton { display: inline-flex; align-items: center; gap: 9px; margin-top: 22px; padding: 11px 14px; border: 1px solid #a1a8ff; border-radius: 8px; color: #17182b; background: #a1a8ff; font-size: 10px; font-weight: 750; transition: border-color 150ms ease, box-shadow 150ms ease; }
+    .heroButton svg { width: 14px; height: 14px; }
+    .heroButton:hover { border-color: #d0d3ff; box-shadow: 0 0 0 4px rgb(161 168 255 / 14%); }
+    .safeNote { display: flex; align-items: center; gap: 7px; margin-top: 18px; color: #888ba7; font-size: 9px; }
+    .safeNote svg { width: 13px; height: 13px; color: #9abda9; }
+
+    .heroVisual { justify-self: end; width: min(100%, 470px); border: 1px solid #42435f; border-radius: 12px; overflow: hidden; background: #20213a; box-shadow: 0 22px 65px rgb(0 0 0 / 22%); }
+    .visualHeader { display: flex; min-height: 40px; align-items: center; gap: 9px; padding: 0 13px; border-bottom: 1px solid #393a55; color: #a2a4bc; background: #252642; font-family: ui-monospace, Consolas, monospace; font-size: 8px; }
+    .visualHeader > svg { width: 13px; height: 13px; margin-left: auto; color: #91d3ae; }
+    .visualDots { display: inline-flex; gap: 4px; }
+    .visualDots i { width: 6px; height: 6px; border-radius: 50%; background: #77799b; }
+    .visualDots i:first-child { background: #ff9999; }
+    .visualDots i:nth-child(2) { background: #e4c17f; }
+    .visualDots i:nth-child(3) { background: #93c99e; }
+    .visualCode { display: flex; align-items: center; gap: 14px; padding: 17px 15px; border-bottom: 1px solid #373852; }
+    .visualCode > span, .visualResult > span { color: #898ba7; font-size: 8px; font-weight: 700; letter-spacing: 0.09em; }
+    .visualCode code { color: #cdb8ff; font-family: ui-monospace, Consolas, monospace; font-size: 10px; }
+    .visualResult { padding: 15px; }
+    .visualResult p { margin-top: 11px; color: #a8a9c1; font-family: ui-monospace, Consolas, monospace; font-size: 9px; }
+    .visualResult p b { color: #f0d391; font-weight: 500; }
+    .visualResult > div { display: flex; align-items: center; gap: 8px; margin-top: 10px; padding: 9px; border: 1px solid #4b4b64; border-radius: 7px; background: #292a45; }
+    .visualResult > div i { width: 6px; height: 6px; flex: 0 0 auto; border-radius: 50%; background: #e2be7c; }
+    .visualResult strong { color: #f0d391; font-family: ui-monospace, Consolas, monospace; font-size: 9px; font-weight: 600; }
+    .visualResult small { margin-left: auto; color: #9b9db6; font-size: 8px; white-space: nowrap; }
+    .visualFoot { display: flex; justify-content: space-between; padding: 8px 13px; border-top: 1px solid #383953; color: #9496af; background: #242540; font-family: ui-monospace, Consolas, monospace; font-size: 8px; }
+    .heroBottom { display: flex; max-width: 1320px; justify-content: space-between; margin: 45px auto 0; padding-top: 13px; border-top: 1px solid #30314b; color: #82849e; font-size: 8px; letter-spacing: 0.1em; text-transform: uppercase; }
+    .heroBottom > span:last-child { display: inline-flex; align-items: center; gap: 8px; }
+    .heroBottom i { width: 4px; height: 4px; border-radius: 50%; background: #aaaefb; }
+
+    .guide { padding: 40px max(24px, calc((100vw - 1320px) / 2)) 60px; border-top: 1px solid #2f3049; background: #1b1c32; }
+    .guideHeading p { margin-bottom: 5px; color: #aeb2ff; font-size: 8px; font-weight: 750; letter-spacing: 0.12em; text-transform: uppercase; }
+    .guideHeading h2 { color: #e8e8f5; font-size: clamp(21px, 3vw, 28px); font-weight: 700; letter-spacing: -0.04em; }
+    .guideGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 11px; margin-top: 20px; }
+    .guideGrid article { display: grid; grid-template-columns: 27px 1fr; gap: 10px; padding: 14px; border: 1px solid #383952; border-radius: 9px; background: #20213a; }
+    .guideGrid article > span { display: grid; width: 24px; height: 24px; place-items: center; border: 1px solid #4b4d79; border-radius: 7px; color: #bdc0ff; background: #2b2c4b; font-family: ui-monospace, Consolas, monospace; font-size: 8px; }
+    .guideGrid h3 { color: #dedfee; font-size: 10px; font-weight: 700; }
+    .guideGrid p { margin-top: 5px; color: #9597af; font-size: 9px; line-height: 1.65; }
+
+    @media (max-width: 900px) {
+        .heroInner { grid-template-columns: 1fr 0.9fr; gap: 32px; }
+        .guideGrid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 680px) {
+        padding-top: 62px;
+        .hero { padding: 43px 16px 18px; }
+        .heroInner { grid-template-columns: 1fr; gap: 27px; }
+        h1 { font-size: clamp(43px, 11vw, 58px); }
+        .heroVisual { width: 100%; }
+        .heroBottom { margin-top: 34px; font-size: 7px; }
+        .guide { padding: 34px 16px 45px; }
+    }
+    @media (max-width: 420px) { .heroBottom > span:last-child { gap: 4px; font-size: 6px; } .visualResult > div { flex-wrap: wrap; } }
 }
