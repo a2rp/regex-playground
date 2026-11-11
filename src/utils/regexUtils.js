@@ -1,6 +1,6 @@
 export const maxTestLength = 10000;
 
-export const formatRegexLiteral = (pattern, flags) => `/${pattern.replace(/(?<!\\)\//g, "\\/")}/${flags}`;
+export const formatRegexLiteral = (pattern, flags) => `/${pattern.replace(/(\\*)\//g, (match, backslashes) => `${backslashes}${backslashes.length % 2 ? "" : "\\"}/`)}/${flags}`;
 
 export const getRegexLocation = (source, index) => {
     const safeIndex = Math.max(0, Math.min(index, source.length));

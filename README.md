@@ -1,4 +1,4 @@
-﻿![Project screenshot](./screenshot.png)
+﻿![Project preview](./public/preview.png)
 
 # Regex Playground
 
